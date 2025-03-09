@@ -1,16 +1,9 @@
 pipeline {
     agent {
-        docker {
-            image 'maven:3.9.5-openjdk-21'
-        }
+        any
     }
     
     stages {
-        stage('Build') {
-            steps {
-                sh 'mvn clean install -DskipTests'
-            }
-        }
         stage('Test') {
             steps {
                 echo 'Running tests'
