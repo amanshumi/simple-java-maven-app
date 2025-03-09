@@ -12,12 +12,5 @@ pipeline {
                 }
             }
         }
-        stage('Deploy'){
-            dir('/Users/macbookpro/Documents/certs') {
-                steps {
-                    echo 'Deploying...'
-                }
-            }
-        }
     }
 }
