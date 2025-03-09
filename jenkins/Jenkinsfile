@@ -5,8 +5,8 @@ pipeline {
     
     stages {
         stage('Test') {
-            dir('/Users/macbookpro/Documents/certs') {
-                steps {
+            steps {
+                dir('/Users/macbookpro/Documents/certs') {
                     echo 'Running tests'
                     sh 'mvn --version'
                 }
