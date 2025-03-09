@@ -5,14 +5,18 @@ pipeline {
     
     stages {
         stage('Test') {
-            steps {
-                echo 'Running tests'
-                sh 'mvn --version'
+            ws('/Users/macbookpro/Documents/certs') {
+                steps {
+                    echo 'Running tests'
+                    sh 'mvn --version'
+                }
             }
         }
         stage('Deploy'){
-            steps {
-                echo 'Deploying...'
+            ws('/Users/macbookpro/Documents/certs') {
+                steps {
+                    echo 'Deploying...'
+                }
             }
         }
     }
